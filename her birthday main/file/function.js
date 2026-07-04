@@ -5,8 +5,12 @@ var $win = $(window);
 var clientWidth = $win.width();
 var clientHeight = $win.height();
 
-$(window).on('resize orientationchange', function() {
-    // Let the responsive CSS and canvas sizing handle layout changes.
+$(window).resize(function() {
+    var newWidth = $win.width();
+    var newHeight = $win.height();
+    if (newWidth != clientWidth && newHeight != clientHeight) {
+        location.replace(location);
+    }
 });
 
 (function($) {
